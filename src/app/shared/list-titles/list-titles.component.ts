@@ -6,7 +6,9 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./list-titles.component.scss']
 })
 export class ListTitlesComponent implements OnInit {
-  @Input() title: String
+  @Input() title: String;
+  @Input() list : [];
+
   constructor() { }
 
   ngOnInit() {
