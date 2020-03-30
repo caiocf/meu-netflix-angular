@@ -1,6 +1,9 @@
 body {
   background-color: #1B1B1B!important;
   padding-top: 60px;
+  @media (min-width: 992px) {
+      padding-top: 0;
+  }
 }
 .backdrop {
   background-color: rgba(0,0,0,.4);
@@ -11,8 +14,4 @@ body {
   bottom: 0;
   z-index: 999;
 }
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-  }
-}
+
