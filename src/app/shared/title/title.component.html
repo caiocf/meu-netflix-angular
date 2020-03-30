@@ -1,9 +1,13 @@
-<div class="title-item">
-  <video [src]="title.trailer" controls muted="muted"></video>
+<div class="title-item"  (mouseenter)="playvideo()" (mouseleave)="stopVideo()">
+  <video #trailer [src]="title.trailer" controls muted="muted" ></video>
   <img [src]="title.cover" alt="Título">
   <div class="items">
     <div class="left-side">
-      <button type="button" class="btn-play"><i class="material-icons">play_arrow</i></button>
+      <button type="button" class="btn btn-play"><i class="material-icons">play_arrow</i></button>
+      <button type="button" class="btn btn-muted" (click)="toggleSound()">
+        <i class="material-icons" *ngIf="getMueted()">volume_off</i>
+        <i class="material-icons" *ngIf="!getMueted()">volume_up</i>
+      </button>
       <h2>{{ title.name }}</h2>
       <ul class="infos">
         <li class="relevance">{{ title.relevance }}</li>
